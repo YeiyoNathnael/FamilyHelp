@@ -6,6 +6,8 @@ import java.util.Optional;
 import nathnael.yeiyo.adu.ac.ae.model.Family;
 
 public interface FamilyService {
+  Family create(Family family);
+
   Family save(Family family);
   
   Optional<Family> findById(Long id);

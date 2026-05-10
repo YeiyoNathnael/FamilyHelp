@@ -18,6 +18,11 @@ public class FamilyServiceImpl implements FamilyService {
   private FamilyRepository familyRepository;
 
   @Override
+  public Family create(Family family) {
+    return familyRepository.save(family);
+  }
+
+  @Override
   public Family save(Family family) {
     return familyRepository.save(family);
   }

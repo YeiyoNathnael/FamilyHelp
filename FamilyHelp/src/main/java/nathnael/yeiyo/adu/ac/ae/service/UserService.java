@@ -7,6 +7,8 @@ import nathnael.yeiyo.adu.ac.ae.model.User;
 
 public interface UserService {
 
+  User create(User user);
+
   User save(User user);
 
   Optional<User> findById(Long id);

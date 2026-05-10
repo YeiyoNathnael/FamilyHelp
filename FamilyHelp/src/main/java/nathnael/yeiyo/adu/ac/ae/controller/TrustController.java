@@ -12,18 +12,18 @@ import nathnael.yeiyo.adu.ac.ae.model.TrustScore;
 import nathnael.yeiyo.adu.ac.ae.service.TrustScoreService;
 
 @RestController
-@RequestMapping("/families")
+@RequestMapping("/trust")
 public class TrustController {
 
 	@Autowired
 	private TrustScoreService trustScoreService;
 
-	@GetMapping("/{id}/trust-score")
+	@GetMapping("/family/{id}")
 	public List<TrustScore> getTrustScore(@PathVariable Long id) {
 		return trustScoreService.findByFamilyId(id);
 	}
 
-	@GetMapping("/{id}/trust-score/network")
+	@GetMapping("/family/{id}/network")
 	public List<TrustScore> getTrustScoreNetwork(@PathVariable Long id) {
 		return trustScoreService.findByFamilyId(id);
 	}

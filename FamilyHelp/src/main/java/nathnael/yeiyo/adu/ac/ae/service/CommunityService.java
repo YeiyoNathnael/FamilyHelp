@@ -7,6 +7,8 @@ import nathnael.yeiyo.adu.ac.ae.model.Community;
 
 public interface CommunityService {
 
+  Community create(Community community);
+
   Community save(Community community);
 
   Optional<Community> findById(Long id);
@@ -17,5 +19,5 @@ public interface CommunityService {
 
   void deleteById(Long id);
   
-  List<Community> findByCity(String city);
+  List<Community> findByCommunityArea(String area);
 }

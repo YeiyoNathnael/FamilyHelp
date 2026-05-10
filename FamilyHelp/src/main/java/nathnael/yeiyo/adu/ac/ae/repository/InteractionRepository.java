@@ -13,4 +13,5 @@ public interface InteractionRepository extends JpaRepository<Interaction, Long> 
   List<Interaction> findByFamilyAId(Long familyId);
   List<Interaction> findByFamilyBId(Long familyId);
   Optional<Interaction> findByFamilyAIdAndFamilyBId(Long familyAId, Long familyBId);
+  List<Interaction> findByFamilyAIdOrFamilyBId(Long familyAId, Long familyBId);
 }

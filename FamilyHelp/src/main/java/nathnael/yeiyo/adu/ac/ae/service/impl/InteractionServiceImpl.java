@@ -18,6 +18,11 @@ public class InteractionServiceImpl implements InteractionService {
   private InteractionRepository interactionRepository;
 
   @Override
+  public Interaction create(Interaction interaction) {
+    return interactionRepository.save(interaction);
+  }
+
+  @Override
   public Interaction save(Interaction interaction) {
     return interactionRepository.save(interaction);
   }

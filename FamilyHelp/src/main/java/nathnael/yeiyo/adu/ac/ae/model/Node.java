@@ -1,5 +1,7 @@
 package nathnael.yeiyo.adu.ac.ae.model;
 
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -30,10 +32,10 @@ public class Node {
 	private Double currentPhi;
 
 	@Column(name = "last_heartbeat")
-	private String lastHeartbeat;
+	private LocalDateTime lastHeartbeat;
 
 	@Column(name = "joined_at")
-	private String joinedAt;
+	private LocalDateTime joinedAt;
 
 }
 

@@ -1,34 +1,27 @@
 package nathnael.yeiyo.adu.ac.ae.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
 @Table(name = "task_transaction")
 public class TaskTransaction {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
-	@Column(name = "application_id")
-	private long applicationId;
+    @Column(name = "application_id")
+    private long applicationId;
 
-	@Column(name = "status")
-	private String status;
+    @Column(name = "status")
+    private String status;
 
-	@Column(name = "scheduled_date")
-	private String scheduledDate;
+    @Column(name = "scheduled_date")
+    private LocalDateTime scheduledDate;
 
-	@Column(name = "completed_at")
-	private String completedAt;
-
+    @Column(name = "completed_at")
+    private LocalDateTime completedAt;
 }
-
-

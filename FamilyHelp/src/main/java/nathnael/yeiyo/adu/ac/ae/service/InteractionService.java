@@ -6,6 +6,7 @@ import java.util.Optional;
 import nathnael.yeiyo.adu.ac.ae.model.Interaction;
 
 public interface InteractionService {
+  Interaction create(Interaction interaction);
   Interaction save(Interaction interaction);
   Optional<Interaction> findById(Long id);
   List<Interaction> findAll();

@@ -1,5 +1,7 @@
 package nathnael.yeiyo.adu.ac.ae.model;
 
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -36,7 +38,7 @@ public class RaftLog {
 	private Long nodeId;
 
 	@Column(name = "created_at")
-	private String createdAt;
+	private LocalDateTime createdAt;
 
 }
 

@@ -20,4 +20,8 @@ public interface NodeService {
   List<Node> findByStatus(String status);
   
   Optional<Node> findByHostAndPort(String host, Integer port);
+
+  void recordHeartbeat(Long fromNodeId);
+
+  double calculatePhi(Long nodeId);
 }

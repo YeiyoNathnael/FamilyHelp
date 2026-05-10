@@ -18,6 +18,11 @@ public class CommunityServiceImpl implements CommunityService {
   private CommunityRepository communityRepository;
 
   @Override
+  public Community create(Community community) {
+    return communityRepository.save(community);
+  }
+
+  @Override
   public Community save(Community community) {
     return communityRepository.save(community);
   }
@@ -49,8 +54,8 @@ public class CommunityServiceImpl implements CommunityService {
   }
 
   @Override
-  public List<Community> findByCity(String city) {
-    return communityRepository.findByCity(city);
+  public List<Community> findByCommunityArea(String area) {
+    return communityRepository.findByCommunityArea(area);
   }
 
 }

@@ -9,5 +9,5 @@ import nathnael.yeiyo.adu.ac.ae.model.Community;
 
 @Repository
 public interface CommunityRepository extends JpaRepository<Community, Long> {
-  List<Community> findByCity(String city);
+  List<Community> findByCommunityArea(String area);
 }

@@ -57,7 +57,7 @@ public class TaskController {
 	public TaskTransaction completeTask(@PathVariable Long id) {
 		TaskTransaction task = getTask(id);
 		task.setStatus("COMPLETED");
-		task.setCompletedAt(LocalDateTime.now().toString());
+		task.setCompletedAt(LocalDateTime.now());
 		return taskTransactionService.update(task);
 	}
 

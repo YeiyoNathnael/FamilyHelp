@@ -14,4 +14,5 @@ public interface RaftLogRepository extends JpaRepository<RaftLog, Long> {
   List<RaftLog> findByStatus(String status);
   List<RaftLog> findByNodeId(Long nodeId);
   List<RaftLog> findByTerm(Integer term);
+  Optional<RaftLog> findTopByOrderByEntryIndexDesc();
 }
